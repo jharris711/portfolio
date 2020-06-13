@@ -1,0 +1,57 @@
+body {
+    height: 100vh !important;
+    width: 100vw !important;
+    padding: 0;
+    margin: 0 auto;
+    overflow: scroll !important;
+    font-family: 'News Cycle', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+.site-section {
+    padding: 3em 0; }
+    @media (min-width: 768px) {
+      .site-section {
+        padding: 7em 0; } }
+    .site-section.site-section-sm {
+      padding: 4em 0; 
+}
+#site-section {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.bg-custom {
+  background-color: rgba(255,255,255,0.0);
+}
+
+#landing-section {
+  position: relative;
+  min-height: 75vh;
+  min-width: 100vw;
+  background-image: url('../images/jhwd2.svg');
+  background-position: center;
+  background-size: cover;
+}
+#landing-jumbo {
+  background-image: url('../images/banner3.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.shadow-custom {
+  text-shadow: 3px 3px 0px grey;
+}
+

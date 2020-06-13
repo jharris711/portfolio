@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/"  %}
+
+<!-- Landing Section -->
+<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="landing-section">
+	<div class="container p-0">
+		<div class="row mt-5 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0">
+				<div class="jumbotron mt-5 shadow" id="landing-jumbo">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Landing Section -->
+
+<!-- Projects List Section -->
+<div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row mt-5 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0">
+				<h1>Projects</h1>
+				<a class="btn btn-outline-light border-0">See All <i class="fas fa-arrow-circle-right"></i></a>
+				<!-- Jumbotron -->
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center">
+					<div class="text-dark text-center py-5 px-4">
+	  					<div class="py-5">
+							<!-- Content -->
+							<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<!-- Project Card -->
+									{% for project in projects %}
+									{% if forloop.first %}
+								  		<div class="carousel-item active text-center align-items-center justify-content-center" style="max-height: '50%';">
+									{% else %}
+										<div class="carousel-item">
+									{% endif %}
+											<div class="card shadow border-0" style="width: 18rem; height: 23rem;">
+												{% cloudinary project.image.public_id class="card-img-top h-50" %}
+												<div class="card-body pt-4">
+													<h5 class="card-title">{{ project.title }}</h5>
+													<p>{{ project.techs }}</p>
+													<a href="#" class="btn btn-outline-dark border-0">Details <i class="fas fa-arrow-circle-right"></i></a>
+												</div>
+									  		</div>
+										</div>
+									{% endfor %}
+									<!-- Project Card -->
+								</div>
+							</div>
+							<!-- Content -->
+						</div>
+					</div>
+  				</div>
+  				<!-- Jumbotron -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Projects List Section -->
+
+
+
+{% endblock %}
