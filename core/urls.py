@@ -18,5 +18,4 @@ urlpatterns = [
     path('projects/', ProjectListView.as_view(), name='projects'),
     path('social-media/', SocialMediaView.as_view(), name='social'),
     path('contact/', ContactView.as_view(), name='contact'),
-    path('test/', TestView.as_view(), name='test'),
 ]

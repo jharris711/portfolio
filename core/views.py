@@ -60,8 +60,3 @@ class ContactView(View):
             except Exception as e:
                 messages.error(self.request, "Something went wrong. Please try again.")
                 return redirect("core:contact")
-
-
-class TestView(View):
-    def get(self, *args, **kwargs):
-        return render(self.request, "test.html", status=200)
