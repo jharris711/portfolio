@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/about"  %}
+
+
+<!-- Landing Section -->
+<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="landing-section">
+	<div class="container p-0">
+		<div class="row mt-5 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0">
+				<div class="jumbotron shadow bg-custom animate__animated animate__backInDown" id="landing-jumbo">
+                    <h1>About</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Landing Section -->
+
+<!-- About Section -->
+<div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row mt-3 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__backInUp">
+				<h1 class="animate__animated animate__backInRight">Full-Stack Web Design and Development</h1>
+				<!-- Jumbotron -->
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center animate__animated" id="landing-project-jumbo">
+					<div class="text-dark text-center py-4 px-4">
+	  					<div class="py-3">
+							<!-- Content -->
+							<section>
+                                <h3 class="font-weight-bold text-center dark-grey-text pb-2 animate__animated animate__bounceInRight">Digital Solutions for Artists, Innovators, and Businesses</h3>
+								<hr class="w-header my-4 animate__animated animate__bounceInLeft">
+								<p class="lead text-center text-muted pt-2 mb-5 animate__animated animate__bounceInLeft">I can help with any aspect of the development process.</p>
+								<div class="row">
+									<!-- Panel -->
+									<div class="col-md-6 mb-4 animate__animated animate__backInLeft">
+										<!-- Card -->
+										<div class="card text-center">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-laptop-code fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Design</h5>
+												<p class="text-muted mb-4">I develop simple, stylish apps with straightforward content structure and thoughtful interactions.</p>
+												<hr>
+												<p>UX, UI, Web, Mobile, Apps, Logos</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+									<!-- Panel -->
+									<div class="col-md-6 mb-4 animate__animated animate__backInRight">
+										<!-- Card -->
+										<div class="card text-center">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-stream fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Front-End Development</h5>
+												<p class="text-muted mb-4">I code user interfaces from scratch and bring life to creative ideas right in your browser.</p>
+												<hr>
+												<p>HTML, CSS, Sass, Bootstrap, React</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+									<!-- Panel -->
+									<div class="col-md mb-4 animate__animated animate__backInUp">
+										<!-- Card -->
+										<div class="card text-center">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-sitemap fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Back-End Development</h5>
+												<p class="text-muted mb-4">I create safe and secure server-side logic to smoothly integrate data with the UI.</p>
+												<hr>
+												<p>Django, Flask, NodeJS, PostgreSQL, MongoDB, REST APIs</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+								</div>
+							</section>
+							<!-- Content -->
+						</div>
+					</div>
+  				</div>
+  				<!-- Jumbotron -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About Section -->
+
+<!-- Stack Overflow -->
+
+<div class="site-section bg-white animate__animated animate__fadeIn" id="site-section">
+    <div class="container p-0">
+		<div class="row mt-3 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__backInUp">
+				<h1 class="animate__animated animate__backInRight">Professional Story</h1>
+				<!-- Jumbotron -->
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center animate__animated" id="landing-project-jumbo">
+					<div class="text-dark text-center py-5 px-4">
+                          
+                        <!-- Content -->
+                        <div class="card-deck">
+                            <h5 class="text-muted mb-3 pb-2">Read my Developer Story on Stack Overflow or check out my connections on LinkedIn</h5>
+                            <a href="https://www.facebook.com/jharriswebdev/" class="nav-item text-secondary card shadow bg-light animate__animated animate__backInLeft" target="_blank">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fab fa-stack-overflow fa-3x"></i></h5>
+                                    <h4>Stack Overflow</h4>
+                                </div>
+                            </a>
+                            <a href="https://twitter.com/jheeeeezy" class="nav-item text-secondary card shadow bg-light animate__animated animate__backInRight" target="_blank">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fab fa-linkedin fa-3x"></i></h5>
+                                    <h4>LinkedIn</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stack Overflow -->
+
+{% endblock %}

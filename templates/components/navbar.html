@@ -1,10 +1,10 @@
 {% load static %}
 <div class="container">
-  <nav class="navbar navbar-expand-lg shadow-sm fixed-top navbar-light bg-light animate__animated animate__fadeIn">
+  <nav class="navbar navbar-expand-lg shadow-sm fixed-top navbar-light bg-custom animate__animated animate__fadeIn">
     <div class="container">
       <a class="navbar-brand" href="{% url 'core:home' %}">
         <img src="{% static 'images/jharriswebdev.svg' %}" width="35" height="30" class="d-inline-block align-top pr-2" alt="" loading="lazy">
-        J. Harris Web Development
+      J. Harris Web Development
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,19 +13,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-5">
           <li class="nav-item {% if active == '/' %}active{% endif %}">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'core:home' %}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item {% if active == '/about' %}active{% endif %}">
-            <a class="nav-link" href="">About</a>
+            <a class="nav-link" href="{% url 'core:about' %}">About</a>
           </li>
-          <li class="nav-item {% if active == '/mixes' %}active{% endif %}">
-            <a class="nav-link" href="">Projects</a>
+          <li class="nav-item {% if active == '/projects' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'core:projects' %}">Projects</a>
           </li>
-          <li class="nav-item {% if active == '/streams' %}active{% endif %}">
-            <a class="nav-link" href="">Social Media</a>
+          <li class="nav-item {% if active == '/social' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'core:social' %}">Social Media</a>
           </li>
           <li class="nav-item {% if active == '/contact' %}active{% endif %}">
-            <a class="nav-link" href="">Contact</a>
+            <a class="nav-link" href="{% url 'core:contact' %}">Contact</a>
           </li>
       </div>
     </div>

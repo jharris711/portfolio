@@ -5,11 +5,12 @@
 {% include "components/navbar.html" with active="/"  %}
 
 <!-- Landing Section -->
-<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="landing-section">
+<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="home-landing-section">
 	<div class="container p-0">
 		<div class="row mt-5 text-center align-items-center justify-content-center">
-			<div class="col-md-8 m-0 p-0">
-				<div class="jumbotron mt-5 shadow" id="landing-jumbo">
+			<div class="col-md-8 m-0 p-0 mt-5">
+				<div class="jumbotron mt-5 shadow animate__animated animate__animated animate__fadeInDown" id="home-landing-jumbo">
+					
 				</div>
 			</div>
 		</div>
@@ -17,15 +18,93 @@
 </div>
 <!-- Landing Section -->
 
-<!-- Projects List Section -->
+
+<!-- About Section -->
 <div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
 	<div class="container p-0">
-		<div class="row mt-5 text-center align-items-center justify-content-center">
-			<div class="col-md-8 m-0 p-0">
-				<h1>Projects</h1>
-				<a class="btn btn-outline-light border-0">See All <i class="fas fa-arrow-circle-right"></i></a>
+		<div class="row mt-3 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__bounceInLeft">
+				<h1 class="animate__animated animate__bounceInRight">Full-Stack Web Design and Development</h1>
+				<a href="{% url 'core:about' %}" class="btn btn-lg bg-light btn-outline-dark border-0 shadow animate__animated animate__bounceInLeft">See More <i class="fas fa-arrow-circle-right"></i></a>
 				<!-- Jumbotron -->
-				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center">
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center animate__animated" id="landing-project-jumbo">
+					<div class="text-dark text-center py-5 px-4">
+	  					<div class="py-5">
+							<!-- Content -->
+							<section>
+								
+								<h3 class="font-weight-bold text-center dark-grey-text pb-2 animate__animated animate__bounceInRight">Digital Solutions for Artists, Innovators, and Businesses</h3>
+								<hr class="w-header my-4 animate__animated animate__bounceInLeft">
+								<p class="lead text-center text-muted pt-2 mb-5 animate__animated animate__bounceInLeft">I can help with any aspect of the development process.</p>
+								<div class="row">
+									<!-- Panel -->
+									<div class="col-md-6 mb-4 animate__animated animate__bounceInRight">
+										<!-- Card -->
+										<div class="card text-center shadow border-0">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-laptop-code fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Design</h5>
+												<p class="text-muted mb-4">I develop simple, stylish apps with straightforward content structure and thoughtful interactions.</p>
+												<hr>
+												<p>UX, UI, Web, Mobile, Apps, Logos</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+									<!-- Panel -->
+									<div class="col-md-6 mb-4 animate__animated animate__bounceInRight">
+										<!-- Card -->
+										<div class="card text-center shadow border-0">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-stream fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Front-End Development</h5>
+												<p class="text-muted mb-4">I code user interfaces from scratch and bring life to creative ideas right in your browser.</p>
+												<hr>
+												<p>HTML, CSS, Sass, Bootstrap, React</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+									<!-- Panel -->
+									<div class="col-md mb-4 animate__animated animate__bounceInRight">
+										<!-- Card -->
+										<div class="card text-center shadow border-0">
+											<div class="card-body">
+												<span class="mt-4 pt-2"></p><i class="fas fa-sitemap fa-3x"></i></span>
+												<h5 class="font-weight-normal my-4 py-2">Back-End Development</h5>
+												<p class="text-muted mb-4">I create safe and secure server-side logic to smoothly integrate data with the UI.</p>
+												<hr>
+												<p>Django, Flask, NodeJS, PostgreSQL, MongoDB, REST APIs</p>
+											</div>
+										</div>
+										<!-- Card -->
+									</div>
+									<!-- Panel -->
+								</div>
+							</section>
+							<!-- Content -->
+						</div>
+					</div>
+  				</div>
+  				<!-- Jumbotron -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About Section -->
+
+
+<!-- Projects List Section -->
+<div class="site-section bg-white animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row mt-3 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__bounceInRight">
+				<h1>Projects</h1>
+				<a href="{% url 'core:projects' %}" class="btn btn-lg bg-light btn-outline-dark border-0 shadow">See All <i class="fas fa-arrow-circle-right"></i></a>
+				<!-- Jumbotron -->
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center animate__animated" id="landing-project-jumbo">
 					<div class="text-dark text-center py-5 px-4">
 	  					<div class="py-5">
 							<!-- Content -->
@@ -38,12 +117,15 @@
 									{% else %}
 										<div class="carousel-item">
 									{% endif %}
-											<div class="card shadow border-0" style="width: 18rem; height: 23rem;">
+											<div class="card shadow-lg border-0" style="width: 18rem; height: 23rem;">
 												{% cloudinary project.image.public_id class="card-img-top h-50" %}
-												<div class="card-body pt-4">
+												<div class="card-body">
 													<h5 class="card-title">{{ project.title }}</h5>
 													<p>{{ project.techs }}</p>
-													<a href="#" class="btn btn-outline-dark border-0">Details <i class="fas fa-arrow-circle-right"></i></a>
+													<div class="btn-group">
+														<a class="btn btn-sm bg-light btn-outline-dark border-0 shadow-sm m-1" href="{{ project.github }}" target="_blank"><i class="fab fa-github left"></i> View GitHub</a>
+														<a class="btn btn-sm bg-light btn-outline-dark border-0 shadow-sm m-1" href="{{ project.url }}" target="_blank"><i class="fas fa-clone left"></i> View Live</a>
+													</div>
 												</div>
 									  		</div>
 										</div>
@@ -61,7 +143,73 @@
 	</div>
 </div>
 <!-- Projects List Section -->
+<!-- Social List Section -->
+<div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row mt-3 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__bounceInLeft">
+				<h1>Social Media</h1>
+				<a href="{% url 'core:projects' %}" class="btn btn-lg btn-outline-dark bg-light border-0 shadow">See More <i class="fas fa-arrow-circle-right"></i></a>
+				<!-- Jumbotron -->
+				<div class="card bg-light shadow border-0 mt-3 text-center align-items-center justify-content-center">
+					<div class="text-dark text-center py-5 px-4">
+	  					<div class="">
+							<!-- Links -->
+							<h1 class="pb-2">Follow Me</h1>
+							<div class="card-deck">
+								<a href="https://www.facebook.com/jharriswebdev/" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>Facebook</h4>
+										<h5 class="card-title"><i class="fab fa-facebook-square fa-3x"></i></h5>
+									</div>
+								</a>
+								<a href="https://twitter.com/jheeeeezy" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>LinkedIn</h4>
+										<h5 class="card-title"><i class="fab fa-linkedin fa-3x"></i></h5>
+									</div>
+								</a>
+								<a href="https://twitter.com/jheeeeezy" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>Twitter</h4>
+										<h5 class="card-title"><i class="fab fa-twitter-square fa-3x"></i></h5>
+									</div>
+								</a>
+							</div>
+
+							<div class="card-deck">
+								<a href="https://github.com/jharris711" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>GitHub</h4>
+										<h5 class="card-title"><i class="fab fa-github-square fa-3x"></i></h5>
+									</div>
+								</a>
+								<a href="https://stackoverflow.com/story/joshharris" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>Stack Overflow</h4>
+										<h5 class="card-title"><i class="fab fa-stack-overflow fa-3x"></i></h5>
+									</div>
+								</a>                    
+								<a href="https://www.youtube.com/channel/UCUQ-fkPVp3grr4nGWlH8ppw" class="nav-item text-secondary card shadow bg-light" target="_blank">
+									<div class="card-body">
+										<h4>Youtube</h4>
+										<h5 class="card-title"><i class="fab fa-youtube fa-3x"></i></h5>
+									</div>
+								</a>                    
+							</div>
+							<!-- Links -->
+							
+						</div>
+					</div>
+  				</div>
+  				<!-- Jumbotron -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Social List Section -->
 
 
 
 {% endblock %}
+

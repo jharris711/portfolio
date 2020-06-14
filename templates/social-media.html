@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/social"  %}
+
+
+<!-- Landing Section -->
+<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="landing-section">
+	<div class="container p-0">
+		<div class="row mt-5 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0">
+				<div class="jumbotron shadow bg-custom animate__animated animate__flipInX" id="landing-jumbo">
+                    <h1>Social Media</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Landing Section -->
+
+<!-- Social Media -->
+<div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row text-center align-items-center justify-content-center pt-">
+			<div class="col-md-8 m-0 p-0">
+                <!-- Links -->
+                <h1 class="pb-2">Follow Me</h1>
+                <div class="card-deck">
+                    <a href="https://www.facebook.com/jharriswebdev/" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInY" target="_blank">
+                        <div class="card-body">
+                            <h4>Facebook</h4>
+                            <h5 class="card-title"><i class="fab fa-facebook-square fa-3x"></i></h5>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joshsharris/" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInX" target="_blank">
+                        <div class="card-body">
+                            <h4>LinkedIn</h4>
+                            <h5 class="card-title"><i class="fab fa-linkedin fa-3x"></i></h5>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/jheeeeezy" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInY" target="_blank">
+                        <div class="card-body">
+                            <h4>Twitter</h4>
+                            <h5 class="card-title"><i class="fab fa-twitter-square fa-3x"></i></h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-deck">
+                    <a href="https://github.com/jharris711" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInX" target="_blank">
+                        <div class="card-body">
+                            <h4>GitHub</h4>
+                            <h5 class="card-title"><i class="fab fa-github-square fa-3x"></i></h5>
+                        </div>
+                    </a>
+                    <a href="https://stackoverflow.com/story/joshharris" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInY" target="_blank">
+                        <div class="card-body">
+                            <h4>Stack Overflow</h4>
+                            <h5 class="card-title"><i class="fab fa-stack-overflow fa-3x"></i></h5>
+                        </div>
+                    </a>                    
+                    <a href="https://www.youtube.com/channel/UCUQ-fkPVp3grr4nGWlH8ppw" class="nav-item text-secondary card shadow bg-light animate__animated animate__flipInX" target="_blank">
+                        <div class="card-body">
+                            <h4>Youtube</h4>
+                            <h5 class="card-title"><i class="fab fa-youtube fa-3x"></i></h5>
+                        </div>
+                    </a>                    
+                </div>
+                <!-- Links -->
+            </div>
+        </div>
+        
+        <div class="row bg-white text-center align-items-center justify-content-center pt-4 mt-5 pb-4 mb-5">
+			<div class="col-md-8 m-0 p-0 pb-4">
+                <!-- Facebook -->
+                <h1>Facebook</h1>
+                <div class="fb-page" data-href="https://www.facebook.com/jharriswebdev/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/jharriswebdev/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/jharriswebdev/">J. Harris Web Dev</a>
+                    </blockquote>
+                </div>
+                <!-- Facebook -->
+            </div>
+        </div>
+        <div class="row text-center align-items-center justify-content-center pt-4 mt-5">
+			<div class="col-md-8 m-0 p-0">
+                <!-- Twitter -->
+                <h1>Twitter</h1>
+                <a class="twitter-timeline" data-width="330" data-height="600" href="https://twitter.com/jheeeeezy?ref_src=twsrc%5Etfw">Tweets by jheeeeezy</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <!-- Twitter -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Social Media -->
+{% endblock %}
+
+
+<a class="twitter-timeline" href="https://twitter.com/jheeeeezy?ref_src=twsrc%5Etfw">Tweets by jheeeeezy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

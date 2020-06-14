@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/projects"  %}
+
+
+<!-- Landing Section -->
+<div class="site-section shadow-lg bg-light animate__animated animate__fadeIn text-center align-items-center justify-content-center" id="landing-section">
+	<div class="container p-0">
+		<div class="row mt-5 text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0">
+				<div class="jumbotron shadow bg-custom animate__animated animate__zoomIn" id="landing-jumbo">
+                    <h1>Projects</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Landing Section -->
+
+<!-- Projects List Section -->
+<div class="site-section bg-light animate__animated animate__fadeIn" id="site-section">
+	<div class="container p-0">
+		<div class="row text-center align-items-center justify-content-center">
+			<div class="col-md-8 m-0 p-0 animate__animated animate__zoomIn">
+				<!-- Content -->
+				<div class="container my-5">
+					<!-- Section: Block Content -->
+					<section class="dark-grey-text text-center">
+					  	<p class="text-muted w-responsive mx-auto mb-5"></p>
+				  		<!-- Grid row -->
+					  	<div class="row">
+							<!-- Grid column -->
+							{% for project in object_list %}
+							<div class="col-lg-4 col-md-12 mb-4 shadow rounded p-3 bg-light animate__animated animate__zoomIn">
+				  				<div class="view overlay rounded z-depth-1">
+									{% cloudinary project.image.public_id class="img-fluid" %}
+									<a>
+							  			<div class="mask rgba-white-slight"></div>
+									</a>
+						  		</div>
+				  				<div class="px-3 pt-3 mx-1 mt-1 pb-0">
+									<h4 class="font-weight-bold mt-1 mb-3">{{ project.title }}</h4>
+									<p class="text-muted">{{ project.techs }}</p>
+									<div class="btn-group">
+										<a class="btn btn-sm bg-light btn-outline-dark border-0 shadow-sm m-1" href="{{ project.github }}" target="_blank"><i class="fab fa-github left"></i> View GitHub</a>
+										<a class="btn btn-sm bg-light btn-outline-dark border-0 shadow-sm m-1" href="{{ project.url }}" target="_blank"><i class="fas fa-clone left"></i> View Live</a>
+									</div>									
+						  		</div>
+							</div>
+							 {% endfor %}
+							<!-- Grid column -->
+						</div>
+						<!-- Bottom Pagination -->
+						<div class="pagination mt-5 pt-2 mb-3 text-dark text-center align-items-center justify-content-center">
+							<span class="step-links">
+								{% if page_obj.has_previous %}
+									<a href="?page=1">&laquo; FIRST</a>
+									<a href="?page={{ page_obj.previous_page_number }}">PREVIOUS</a>
+								{% endif %}
+						
+								<span class="current">
+									Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+								</span>
+						
+								{% if page_obj.has_next %}
+									<a href="?page={{ page_obj.next_page_number }}">NEXT</a>
+									<a href="?page={{ page_obj.paginator.num_pages }}">LAST &raquo;</a>
+								{% endif %}
+							</span>
+						</div>
+						<!-- Bottom Pagination -->
+					  	<!-- Grid row -->
+				  	</section>
+					<!-- Section: Block Content -->
+				</div>
+				<!-- Content -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Projects List Section -->
+
+
+{% endblock %}

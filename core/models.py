@@ -7,6 +7,11 @@ from cloudinary.models import CloudinaryField
 import cloudinary.uploader
 
 
+class About(models.Model):
+    id = models.IntegerField(primary_key=True)
+    slug = models.SlugField()
+    text = models.TextField()
+
 
 class Project(models.Model):
     id = models.IntegerField(primary_key=True)
