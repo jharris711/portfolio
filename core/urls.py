@@ -5,7 +5,6 @@ from .views import (
     ProjectListView,
     SocialMediaView,
     ContactView,
-    TestView, 
 )
 
 
