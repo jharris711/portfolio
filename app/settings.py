@@ -95,7 +95,7 @@ EMAIL_PORT = os.getenv('EMAIL_PORT')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-""" LOGGING = {
+LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
@@ -132,7 +132,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
             'propagate': False,
         },
     }
-} """
+}
 
 django_heroku.settings(config=locals(), staticfiles=False, logging=False)
 del DATABASES['default']['OPTIONS']['sslmode']
