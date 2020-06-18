@@ -15,7 +15,9 @@ a:hover {
   text-decoration: underline !important;
 }
 
-
+.bg-custom {
+    background-color: rgba(255,255,255,0.95);
+}
 
 .animate__animated.animate__fadeIn {
   --animate-duration: 2s;
@@ -35,20 +37,11 @@ a:hover {
     min-width: 100vw;
 }
 
-.bg-custom {
-  background-color: rgba(255,255,255,0.95);
-}
-
 #home-landing-section {
   position: relative;
   min-height: 75vh;
   min-width: 100vw;
   background-image: url('../images/jhwd2.svg');
-  background-position: center;
-  background-size: cover;
-}
-#home-landing-jumbo {
-  background-image: url('../images/banner3.png');
   background-position: center;
   background-size: cover;
 }
@@ -61,10 +54,3 @@ a:hover {
   background-position: center;
   background-size: cover;
 }
-/* #landing-jumbo {
-  background-image: url('../images/banner3.png');
-  background-position: center;
-  background-size: cover;
-} */
-
-
