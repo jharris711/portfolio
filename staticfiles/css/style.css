@@ -1,6 +1,4 @@
 body {
-    height: 100vh !important;
-    width: 100vw !important;
     padding: 0;
     margin: 0 auto;
     font-family: 'News Cycle', sans-serif;
@@ -41,7 +39,7 @@ a:hover {
   position: relative;
   min-height: 75vh;
   min-width: 100vw;
-  background-image: url('../images/jhwd2.svg');
+  background-image: url('../images/bg.svg');
   background-position: center;
   background-size: cover;
 }
@@ -50,7 +48,7 @@ a:hover {
   position: relative;
   min-height: 50vh;
   min-width: 100vw;
-  background-image: url('../images/jhwd2.svg');
+  background-image: url('../images/bg.svg');
   background-position: center;
   background-size: cover;
 }
