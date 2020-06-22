@@ -29,19 +29,23 @@ a:hover {
     .site-section.site-section-sm {
       padding: 4em 0; 
 }
+
 #site-section {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
 }
 
-#home-landing-section {
+#home_landing_section {
   position: relative;
-  min-height: 75vh;
+  min-height: 74vh;
   min-width: 100vw;
   background-image: url('../images/bg.svg');
   background-position: center;
   background-size: cover;
+}
+#landing_contact_section {
+    min-height: 25vh;
 }
 
 #landing-section {
@@ -52,3 +56,6 @@ a:hover {
   background-position: center;
   background-size: cover;
 }
+
+
+

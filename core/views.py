@@ -6,14 +6,16 @@ from django.conf import settings
 from django.views.generic import View, ListView, DetailView, TemplateView
 from .models import Project
 from .forms import ContactForm
-
+from random import choice
 
 
 class HomePageView(View):
     def get(self, *args, **kwargs):
         projects = Project.objects.all()
+        random_project1 = choice(Project.objects.all())
         context = {
-            'projects': projects
+            'projects': projects,
+            "random_project1": random_project1,
         }
         return render(self.request, 'home.html', context, status=200)
 

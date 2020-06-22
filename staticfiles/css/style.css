@@ -52,3 +52,7 @@ a:hover {
   background-position: center;
   background-size: cover;
 }
+
+#landing_contact_section {
+    min-height: 25vh;
+}
