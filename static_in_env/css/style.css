@@ -29,6 +29,9 @@ a:hover {
     .site-section.site-section-sm {
       padding: 4em 0; 
 }
+.underline_it {
+    text-decoration: underline !important;
+}
 
 #site-section {
     position: relative;
@@ -56,6 +59,4 @@ a:hover {
   background-position: center;
   background-size: cover;
 }
-
-
 
